@@ -1,0 +1,5 @@
+language: C
+before_script:
+  - make
+script:
+  - build/jcom
