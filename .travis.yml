@@ -1,5 +1,5 @@
 language: C
 before_script:
-  - make
+  - CC=gcc make
 script:
   - build/jcom
