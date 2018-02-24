@@ -16,6 +16,10 @@ I've finished the main parts of the screen, but haven't built the filesystem or 
 
 ---
 
+# Build Status: [![Build Status](https://travis-ci.org/shakna-israel/jcom.svg?branch=master)](https://travis-ci.org/shakna-israel/jcom)
+
+---
+
 # Requirements
 
 ---
