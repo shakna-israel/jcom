@@ -1,4 +1,4 @@
-#ifndef __JCOM_CROSS__
+#ifndef JCOM_CROSS
 
 // Cross platform include for Sleep/usleep
 #if defined(WIN32) || defined(_WIN32) || defined(__WIN32) && !defined(__CYGWIN__)
@@ -7,6 +7,7 @@
 #include <unistd.h>
 #endif
 
+void clearscr(void);
 void clearscr() {
   // Clear the host OS terminal
   #if defined(WIN32) || defined(_WIN32) || defined(__WIN32) && !defined(__CYGWIN__)
@@ -17,14 +18,15 @@ void clearscr() {
   #endif
 }
 
+void sleepn(int millis);
 void sleepn(int millis) {
   // Sleep for number of milliseconds
   #if defined(WIN32) || defined(_WIN32) || defined(__WIN32) && !defined(__CYGWIN__)
   Sleep(millis);
   #else
-  usleep(millis*1000);
+  usleep((useconds_t)millis*1000);
   #endif
 }
 
-#define __JCOM_CROSS__
+#define JCOM_CROSS
 #endif

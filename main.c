@@ -1,9 +1,6 @@
 #include "main.h"
 #include "cross.h"
 
-int screen[SCREEN_HEIGHT][SCREEN_WIDTH] = {0};
-int print_pos[2] = {0};
-
 void flush_screen() {
   for(int y = 0; y < SCREEN_HEIGHT; y++) {
     for(int x = 0; x < SCREEN_WIDTH; x++) {
