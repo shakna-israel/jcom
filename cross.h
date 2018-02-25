@@ -24,7 +24,7 @@ void sleepn(int millis) {
   #if defined(WIN32) || defined(_WIN32) || defined(__WIN32) && !defined(__CYGWIN__)
   Sleep(millis);
   #else
-  nanosleep((const struct timespec[]){{millis/1000, 0}}, NULL);
+  nanosleep((const struct timespec[]){{millis/1000, 0L}}, NULL);
   #endif
 }
 
