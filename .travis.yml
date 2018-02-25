@@ -1,3 +1,4 @@
+dist: trusty
 language: C
 before_script:
   - make CC=gcc
