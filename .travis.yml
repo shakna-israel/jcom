@@ -1,6 +1,6 @@
 dist: trusty
 language: C
 before_script:
-  - make CC=gcc
+  - make debug CC=gcc
 script:
   - build/jcom
