@@ -24,10 +24,7 @@ void sleepn(int millis) {
   #if defined(WIN32) || defined(_WIN32) || defined(__WIN32) && !defined(__CYGWIN__)
   Sleep(millis);
   #else
-  struct timespec timer;
-  timer.tv_sec = millis/1000;
-  timer.tv_nsec = 0;
-  nanosleep(&timer, NULL);
+  nanosleep((const struct timespec[]){{millis/1000, 0}}, NULL);
   #endif
 }
 
